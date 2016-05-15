@@ -20,20 +20,19 @@
            data-click-to-select="true"
            data-toolbar="#toolbar">
         <thead>
-        <tr>
-            <th data-field="studentId1">学号</th>
-            <th data-field="name1">姓名</th>
-        </tr>
+            <tr>
+                <th>学号</th>
+                <th>姓名</th>
+            </tr>
         </thead>
         <body>
-        <{$value=Student::getAllStudent()}>
-        <{foreach from=$value item=t}>
-        <tr class="gradeX">
-
-            <td class="hidden-xs"><{$t['studentId']}></td>
-            <td class="hidden-xs"><{$t['name']}></td>
-        </tr>
-        <{/foreach}>
+            <{$value=Student::getAllStudent()}>
+            <{foreach from=$value item=t}>
+                <tr class="gradeX">
+                    <td class="hidden-xs"><{$t['studentId']}></td>
+                    <td class="hidden-xs"><{$t['name']}></td>
+                </tr>
+            <{/foreach}>
         </body>
     </table>
 
@@ -44,30 +43,23 @@
            data-click-to-select="true"
            data-toolbar="#toolbar">
         <thead>
-        <tr>
-            <th data-field="studentId">学号</th>
-            <th data-field="name">姓名</th>
-        </tr>
+            <tr>
+                <th data-field="studentId">学号</th>
+                <th data-field="name">姓名</th>
+            </tr>
         </thead>
     </table>
 <script>
     var $table = $('#table');
     $(function () {
         $.ajax({
-                url: "/student/getalluser",
+            url: "/student/getalluser",
             success: successCallback,
             error: errorCallback
         });
     });
     function successCallback(json){
-        var rows=[];
         json = $.parseJSON(json);
-        for(var i=0;i<json.length;i++){
-            rows.push({
-                name:json[i].name,
-                studentId:json[i].studentId
-            });
-        }
         $table.bootstrapTable('load', json);
     }
     function errorCallback() {

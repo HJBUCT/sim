@@ -15,7 +15,7 @@ class Controller_login extends Controller_Template{
     }
     public function action_loginapi(){
         $this -> auto_render = FALSE;
-        //if ($this -> request -> is_ajax()) //判断是否为ajax请求
+        if ($this -> request -> is_ajax()) //判断是否为ajax请求
         {
             $data = $this->request->post();
             $query = Login::loginchack($data);

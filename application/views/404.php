@@ -7,6 +7,7 @@
 <body>
     <div style="text-align: center">
         <img src="resource/404.jpg">
+
     </div>
 </body>
 </html>
