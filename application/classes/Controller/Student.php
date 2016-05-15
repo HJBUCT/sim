@@ -15,8 +15,7 @@ class Controller_student extends Controller_Template {
         if ($this -> request -> is_ajax()) //判断是否为ajax请求
         {
             //get $arr here.
-            $sql = 'select * from student';
-            $arr = DB::query(Database::SELECT, $sql)->execute()->as_array();
+            $arr = Student::getAllStudent();
             echo json_encode($arr);//建议这样写,避免0或其他情况.
             exit;
         }

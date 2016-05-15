@@ -15,4 +15,12 @@ class BaseClass{
 //        $query->execute();
         return $query;
     }
+    public static function loginchack($data){
+        $query = DB::select()->from($data['person'])
+            ->where($data['person'].'Id','=' ,$data['id'] )
+            ->and_where('password','=' ,$data['password'] )
+            ->execute()
+            ->as_array();
+        return $query;
+    }
 }
