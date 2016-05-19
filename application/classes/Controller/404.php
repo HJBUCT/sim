@@ -4,7 +4,7 @@ class Controller_404 extends Controller {
 
     public function action_index()
     {
-		$this->response->body(View::factory('404'));
+		//$this->response->body(View::factory('404'));
     }
 
 }
