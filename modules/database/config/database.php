@@ -74,18 +74,18 @@ return array
 	 */
 // 	'alternate_mysqli' => array
 	'default' => array
- 	(
- 		'type'       => 'MySQLi',
- 		'connection' => array(
- 			'hostname'   => 'rdsfu04izz458w8d6420.mysql.rds.aliyuncs.com',
- 			'database'   => 'rb0681il8b80i8lh',
- 			'username'   => 'rb0681il8b80i8lh',
- 			'password'   => 'jike1306',
- 			'persistent' => FALSE,
- 			'ssl'        => NULL,
- 		),
- 		'table_prefix' => '',
- 		'charset'      => 'utf8',
- 		'caching'      => FALSE,
- 	),
+	(
+		'type'       => 'MySQLi',
+		'connection' => array(
+			'hostname'   => '139.129.9.253',
+			'database'   => 'jike1306',
+			'username'   => 'jike',
+			'password'   => '123456',
+			'persistent' => FALSE,
+			'ssl'        => NULL,
+		),
+		'table_prefix' => '',
+		'charset'      => 'utf8',
+		'caching'      => FALSE,
+	),
 );

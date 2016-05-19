@@ -65,8 +65,11 @@
             success: successCallback,
             error: errorCallback
         });
-        function successCallback(json){
-            alert(json.toString());
+        function successCallback(res){
+            if(res=="success") {
+                document.cookie="id="+data.id;
+                window.location.href = 'selectcourse';
+            }
         }
         function errorCallback(){
             alert(data);

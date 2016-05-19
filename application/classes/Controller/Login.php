@@ -20,7 +20,7 @@ class Controller_login extends Controller_Template{
             $data = $this->request->post();
             $query = Login::loginchack($data);
             if (sizeof($query) == 1)
-                echo 'success';
+                echo "success";
             else
                 echo 'false';
             exit;

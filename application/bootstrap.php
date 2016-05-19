@@ -147,13 +147,42 @@ Cookie::$salt = 'foobar';
  * Set the routes. Each route must have a minimum of a name, a URI and a set of
  * defaults for the URI.
  */
-
-Route::set('default', '(<controller>(/<action>))',array('controller'=>'(student|login)'))
+Route::set('defaulta', '(<controller>(/<action>))',array('controller'=>'(login)'))
+	->defaults(array(
+		'controller' => 'login',
+		//'action'     => 'index',
+	));
+Route::set('default', '(<controller>(/<action>))',array('controller'=>'(student)'))
 	->defaults(array(
 		'controller' => 'student',
-		'action'     => 'index',
+		//'action'     => 'index',
 	));
 
+Route::set('defaultb', '(<controller>(/<action>))',array('controller'=>'(selectcourse)'))
+	->defaults(array(
+		'controller' => 'selectcourse',
+		//'action'     => 'index',
+	));
+Route::set('defaultc', '(<controller>(/<action>))',array('controller'=>'(profession)'))
+	->defaults(array(
+		'controller' => 'profession',
+		//'action'     => 'index',
+	));
+Route::set('defaultd', '(<controller>(/<action>))',array('controller'=>'(generalcourse)'))
+	->defaults(array(
+		'controller' => 'generalcourse',
+		//'action'     => 'index',
+	));
+Route::set('defaulte', '(<controller>(/<action>))',array('controller'=>'(PEcourse)'))
+	->defaults(array(
+		'controller' => 'PEcourse',
+		//'action'     => 'index',
+	));
+Route::set('defaultf', '(<controller>(/<action>))',array('controller'=>'(deletecourse)'))
+	->defaults(array(
+		'controller' => 'deletecourse',
+		//'action'     => 'index',
+	));
 Route::set('catch_all', '<path>', array('path' => '.+'))
 	->defaults(array(
 			'controller' => '404',
